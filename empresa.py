@@ -49,17 +49,17 @@ class Empresa():
     def generarEmpleados(self):
         self.empleados.append(Empleado(
                 choice(NOMBRES) + " " + choice(APELLIDOS),
-                randint(18, 70),
+                randint(16, 70),
                 choice(SEXO),
                 randint(14000, 40000)
             ))
 
-    def buscarMenores21(self, sexo = None):
+    def buscarMenores18(self, sexo = None):
         """Genero un array con los objetos que tengan el atributo edad menor a 21"""
         if sexo == None:
-            menores = filter(lambda empleado: empleado.edad < 21, self.empleados)        
+            menores = filter(lambda empleado: empleado.edad < 18, self.empleados)        
         else:
-            menores = filter(lambda empleado: empleado.edad < 21 and empleado.sexo == sexo, self.empleados)
+            menores = filter(lambda empleado: empleado.edad < 18 and empleado.sexo == sexo, self.empleados)
         return menores
     
     def buscarMayores65(self, sexo = None):

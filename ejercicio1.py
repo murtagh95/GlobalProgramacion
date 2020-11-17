@@ -61,7 +61,7 @@ while True:
     print("\t\t----------------------MENU----------------------")
     print("Eligue una opción(escribir solo el nº):")
     print("\t1. Ver empleados")
-    print("\t2. Ver empleados menores a 21")
+    print("\t2. Ver empleados menores a 18")
     print("\t3. Ver empleados mayores a 65")
     print("\t4. Ver empleados con mayor sueldo")
     print("\t5. Salir")
@@ -83,17 +83,17 @@ while True:
         elif opcion == 2:
             valor = eleguirSexo()
             if valor == 1:
-                print("Menores de 21 Masculinos:")
-                menores = empresa.buscarMenores21("Masculino")
+                print("Menores de 18 Masculinos:")
+                menores = empresa.buscarMenores18("Masculino")
             elif valor == 2:
-                print("Menores de 21 Femeninos:")
-                menores = empresa.buscarMenores21("Femenino")
+                print("Menores de 18 Femeninos:")
+                menores = empresa.buscarMenores18("Femenino")
             elif valor == 3:
-                print("Menores de 21 No especificado:")
-                menores = empresa.buscarMenores21("No especificado")
+                print("Menores de 18 No especificado:")
+                menores = empresa.buscarMenores18("No especificado")
             else:
-                print("Menores de 21:")
-                menores = empresa.buscarMenores21()
+                print("Menores de 18:")
+                menores = empresa.buscarMenores18()
             
             
             for menor in menores:
@@ -109,17 +109,17 @@ while True:
         elif opcion == 3:
             valor = eleguirSexo()
             if valor == 1:
-                print("Menores de 21 Masculinos:")
-                mayores = empresa.buscarMenores21("Masculino")
+                print("Mayores de 65 Masculinos:")
+                mayores = empresa.buscarMayores65("Masculino")
             elif valor == 2:
-                print("Menores de 21 Femeninos:")
-                mayores = empresa.buscarMenores21("Femenino")
+                print("Mayores de 65 Femeninos:")
+                mayores = empresa.buscarMayores65("Femenino")
             elif valor == 3:
-                print("Menores de 21 No especificado:")
-                mayores = empresa.buscarMenores21("No especificado")
+                print("Mayores de 65 No especificado:")
+                mayores = empresa.buscarMayores65("No especificado")
             else:
-                print("Menores de 21:")
-                mayores = empresa.buscarMenores21()
+                print("Mayores de 65:")
+                mayores = empresa.buscarMayores65()
 
             
             for mayor in mayores:
